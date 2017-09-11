@@ -1,0 +1,59 @@
+.s-side li {
+    position: relative;
+
+    padding: 10px 5px 0 5px;
+    margin: 0;
+
+    list-style-type: none;
+}
+.s-side li::before,
+.s-side li::after {
+    position: absolute;
+    right: auto;
+    left: -20px;
+
+    content: "";
+}
+.s-side li::before {
+    top: 0;
+    bottom: 50px;
+
+    width: 1px;
+    height: 100%;
+
+    border-left: 1px dashed #999;
+}
+.s-side li::after {
+    top: 25px;
+
+    width: 25px;
+    height: 20px;
+
+    border-top: 1px dashed #999;
+}
+.s-side li span {
+    display: inline-block;
+    padding: 3px 8px;
+
+    text-decoration: none;
+}
+li.s-sideNav .s-sideItem {
+    display: none;
+
+    cursor: pointer;
+}
+.s-side li > span {
+    cursor: pointer;
+}
+.s-side > ul > li::before,
+.s-side > ul > li::after {
+    border: 0;
+}
+.s-side li:last-child::before {
+    height: 25px;
+}
+.s-side li.s-sideNav > span:hover,
+.s-side li.s-sideNav > span:hover + ul li span {
+    color: #000;
+    background: #eee;
+}
